@@ -43,3 +43,9 @@ export const createPost = async (req, res) => {
     res.status(500).json({ error: error.message })
   }
 }
+
+export const updatePost = async (req, res) => {
+  const { _id } = req.params
+  const post = await Post.findByIdAndUpdate(_id, req.body, { new: true })
+  res.status(200).json(post)
+}
