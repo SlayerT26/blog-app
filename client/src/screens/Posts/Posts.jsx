@@ -55,7 +55,7 @@ const Posts = () => {
       post.name.toLowerCase().includes(event.target.value.toLowerCase())
     )
     setSearchResult(results)
-    setApplySort(true)
+    // setApplySort(true)
   }
 
   const handleSubmit = (event) => event.preventDefault()
@@ -67,7 +67,7 @@ const Posts = () => {
       <div className='posts'>
         {searchResult.map((post, index) => {
           return (
-            <Product
+            <Post
               _id={post._id}
               name={post.title}
               image_url={post.image_url}

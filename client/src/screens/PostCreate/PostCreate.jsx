@@ -16,7 +16,7 @@ const PostCreate = (props) => {
 
   const handleChange = (event) => {
     const { title, value } = event.target
-    setProduct({
+    setPost({
       ...post,
       [title]: value
     })
